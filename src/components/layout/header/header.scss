@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 1999;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__item__link {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+  }
+
+  &__item__link:hover {
+    color: red;
+  }
+  &__hamburger {
+    display: none;
+    img {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+
+  &__item__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: red;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  input {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    background-color: #edf2f4;
+    border-radius: 8px;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+  }
+
+  &__result {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    max-height: 100px;
+    overflow: auto;
+    background-color: white;
+    box-shadow: 1px 1px 10px #aaa2;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    &__item {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100vh;
+      box-shadow: 1px 1px 10px gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      transition: 1s;
+      z-index: 999;
+    }
+
+    &__hamburger {
+      display: block;
+    }
+
+    &__show {
+      left: 0;
+    }
+
+    &__item__close {
+      display: block;
+    }
+  }
+  .form__result {
+    width: 85%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+      width: 200px !important;
+    }
+  }
+}

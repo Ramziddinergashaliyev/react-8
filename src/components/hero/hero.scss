@@ -1,0 +1,79 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  align-items: center;
+  margin-top: 70px;
+
+  &__left__desc {
+    font-family: Lilita One;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 73.15px;
+    text-align: left;
+  }
+
+  &__left__text {
+    font-family: Lalezar;
+    font-size: 76px;
+    font-weight: 400;
+    text-align: left;
+    color: #f42d2d;
+    font-weight: bold;
+  }
+
+  &__left__title {
+    font-family: Lalezar;
+    font-size: 76px;
+    font-weight: 400;
+    text-align: left;
+    color: #ff0000;
+    font-weight: bolder;
+  }
+
+  &__left__btn {
+    padding: 10px 30px;
+    background-color: #ff0000;
+    color: white;
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+    transition: 0.8s;
+    margin: 20px 0px;
+  }
+
+  &__left__btn:hover {
+    background-color: #fff;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+  }
+
+  &__right {
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 850px) {
+    &__left__text,
+    &__left__title {
+      font-size: 56px;
+    }
+  }
+  @media (max-width: 650px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (max-width: 470px) {
+    &__left__desc,
+    &__left__text,
+    &__left__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__left__btn {
+      width: 100%;
+    }
+  }
+}

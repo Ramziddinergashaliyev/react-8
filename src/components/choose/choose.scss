@@ -1,0 +1,58 @@
+.choose {
+  margin-top: 200px;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+
+  &__card {
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+
+  &__card:hover {
+    box-shadow: 1px 1px 10px #aaa9;
+  }
+
+  &__line {
+    background-color: #ff0404;
+    width: 20px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  &__top__text {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    text-align: center;
+    padding: 10px 0px 50px;
+  }
+
+  &__desc {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  @media (max-width: 780px) {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  @media (max-width: 500px) {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+}
