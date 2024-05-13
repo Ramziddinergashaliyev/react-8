@@ -54,7 +54,7 @@ function Header() {
             <img src={img} alt="" />
           </a>
         </div>
-        <form className="form" action="">
+        <div className="form" action="">
           <input
             value={value}
             onChange={(e) => setValue(e.target.value)}
@@ -65,12 +65,15 @@ function Header() {
           />
           {value.trim() ? <Form product={product} /> : <></>}
           <button
-            onClick={() => setShowlist(true)}
+            onClick={(event) => {
+              event.preventDefault();
+              setShowlist(true);
+            }}
             className="navbar__hamburger"
           >
             <img src={bars} alt="" />
           </button>
-        </form>
+        </div>
       </nav>
     </header>
   );
